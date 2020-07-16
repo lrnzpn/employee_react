@@ -21,7 +21,7 @@ class App extends Component {
 }
 
 const Navigation = () => (
-  <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+  <nav className="navbar navbar-expand-lg navbar-dark bg-dark pp-blue-bg">
     <ul className="navbar-nav mr-auto">
       <li className="nav-item">
         <NavLink exact

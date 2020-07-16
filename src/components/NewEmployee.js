@@ -82,27 +82,25 @@ class NewEmployee extends Component {
   render() {
     return (
       <div>
-        <h4>New Employee</h4>
+        <h4 className="d-flex justify-content-center" style={{paddingTop: '10px'}}>New Employee</h4>
         <hr />
-        <form onSubmit={this.onSubmit}>
-          <h5>Personal Details</h5>
-          <div className="form-row">
-            <div className="form-group col-md-4">
+        <form onSubmit={this.onSubmit} style={{width:'95%', margin:'0 auto'}}>
+          <h5 style={{margin: '10px'}}>Personal Details</h5>
+          <div className="form-group">
               <input type="text" name="firstName"
                 required value={this.state.firstName} onChange={this.onChange} 
               className="form-control" placeholder="First Name" />
             </div>
-            <div className="form-group col-md-4">
+            <div className="form-group">
               <input type="text" name="middleName"
                 required value={this.state.middleName} onChange={this.onChange} 
               className="form-control" placeholder="Middle Name" />
             </div>
-            <div className="form-group col-md-4">
+            <div className="form-group">
               <input type="text" name="lastName"
                 required value={this.state.lastName} onChange={this.onChange} 
               className="form-control" placeholder="Last Name" />
             </div>
-          </div>
           
           <div className="form-row">
             <div className="form-group col-md-6">
@@ -117,48 +115,48 @@ class NewEmployee extends Component {
             </div>
           </div>
 
-          <p>Address</p>
+          <p style={{margin: '10px'}}>Address</p>
           <div className="form-row">
-            <div className="form-group col-md-2">
+            <div className="form-group col-md-4">
               <input type="number" name="unitNumber"
                 required value={this.state.unitNumber} onChange={this.onChange} 
               className="form-control" placeholder="Unit Number" />
             </div>
 
-            <div className="form-group col-md-5">
+            <div className="form-group col-md-8">
               <input type="text" name="street"
                 required value={this.state.street} onChange={this.onChange} 
               className="form-control" placeholder="Street" />
             </div>
+          </div>
 
-            <div className="form-group col-md-5">
+          <div className="form-group">
               <input type="text" name="city"
                 required value={this.state.city} onChange={this.onChange} 
               className="form-control" placeholder="City" />
-            </div>
           </div>
-
-          <div className="form-row">
-            <div className="form-group col-md-5">
+          
+          <div className="form-group">
               <input type="text" name="province"
                 required value={this.state.province} onChange={this.onChange} 
               className="form-control" placeholder="Province" />
             </div>
 
-            <div className="form-group col-md-5">
+          <div className="form-row">
+            <div className="form-group col-md-8">
               <input type="text" name="region"
                 required value={this.state.region} onChange={this.onChange} 
               className="form-control" placeholder="Region" />
             </div>
 
-            <div className="form-group col-md-2">
+            <div className="form-group col-md-4">
               <input type="number" name="zipCode"
                 required value={this.state.zipCode} onChange={this.onChange} 
               className="form-control" placeholder="Zip Code" />
             </div>
           </div>
 
-          <p>Contact Details</p>
+          <p style={{margin: '10px'}}>Contact Details</p>
           <div className="form-row">
             <div className="form-group col-md-6">
               <input type="number" name="mobileNumber"
@@ -179,7 +177,7 @@ class NewEmployee extends Component {
             className="form-control" placeholder="Email" />
           </div>
 
-          <h5>Job Details</h5>
+          <h5 style={{margin: '10px'}}>Job Details</h5>
 
           <div className="form-row">
             <div className="form-group col-md-4">
@@ -220,7 +218,7 @@ class NewEmployee extends Component {
             </div>
           </div>
 
-          <h5>Benefits Details</h5>
+          <h5 style={{margin: '10px'}}>Benefits Details</h5>
           <div className="form-group">
             <input type="text" name="sss"
                 required value={this.state.sss} onChange={this.onChange} 

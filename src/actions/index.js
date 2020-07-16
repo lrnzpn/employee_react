@@ -63,7 +63,6 @@ export const updateEmployee = (employee) => {
     
     return axios.patch(`${API}employee/${employeeId}/`, employee)
       .then(res => {
-        console.log(res.data)
         dispatch({
           type: UPDATE_EMPLOYEE,
           payload: res.data

@@ -93,33 +93,31 @@ class EditEmployee extends Component {
   render() {
 
     const employee = this.props.employee
-    console.log(employee)
     return (
         <div>
-          <h4>Edit Employee {employee.employee_id}</h4>
+          <h4 className="d-flex justify-content-center" style={{paddingTop: '10px'}}>Edit Employee {employee.employee_id}</h4>
           <hr />
-          <form onSubmit={this.onSubmit}>
-            <h5>Personal Details</h5>
-            <div className="form-row">
-              <div className="form-group col-md-4">
+          <form onSubmit={this.onSubmit} style={{width:'95%', margin:'0 auto'}}>
+            <h5 style={{margin: '10px'}}>Personal Details</h5>
+            <div className="form-group">
                 <input type="text" name="firstName" 
                   ref={(input) => this.getFirstName = input}
                  defaultValue={employee.first_name} onChange={this.onChange} 
                 className="form-control"  />
               </div>
-              <div className="form-group col-md-4">
+              <div className="form-group">
                 <input type="text" name="middleName"
                   ref={(input) => this.getMiddleName = input}
                  defaultValue={employee.middle_name} onChange={this.onChange} 
                 className="form-control"  />
               </div>
-              <div className="form-group col-md-4">
+              <div className="form-group">
                 <input type="text" name="lastName"
                   ref={(input) => this.getLastName = input}
                  defaultValue={employee.last_name} onChange={this.onChange} 
                 className="form-control"  />
-              </div>
-            </div>
+              </div>  
+          
             
             <div className="form-row">
               <div className="form-group col-md-6">
@@ -136,46 +134,46 @@ class EditEmployee extends Component {
               </div>
             </div>
 
-            <p>Address</p>
+            <p style={{margin: '10px'}}>Address</p>
             <div className="form-row">
-              <div className="form-group col-md-2">
+              <div className="form-group col-md-4">
                 <input type="number" name="unitNumber"
                   ref={(input) => this.getUnitNumber = input}
                  defaultValue={employee.unit_number} onChange={this.onChange} 
                 className="form-control"  />
               </div>
 
-              <div className="form-group col-md-5">
+              <div className="form-group col-md-8">
                 <input type="text" name="street"
                   ref={(input) => this.getStreet = input}
                  defaultValue={employee.street} onChange={this.onChange} 
                 className="form-control" />
               </div>
-
-              <div className="form-group col-md-5">
+          </div>
+          
+          <div className="form-group">
                 <input type="text" name="city"
                   ref={(input) => this.getCity = input}
                  defaultValue={employee.city} onChange={this.onChange} 
                 className="form-control" />
-              </div>
-            </div>
-
-            <div className="form-row">
-              <div className="form-group col-md-5">
+          </div>
+          
+          <div className="form-group">
                 <input type="text" name="province"
                   ref={(input) => this.getProvince = input}
                  defaultValue={employee.province} onChange={this.onChange} 
                 className="form-control" />
               </div>
 
-              <div className="form-group col-md-5">
+            <div className="form-row">
+              <div className="form-group col-md-8">
                 <input type="text" name="region"
                   ref={(input) => this.getRegion = input}
                  defaultValue={employee.region} onChange={this.onChange} 
                 className="form-control" />
               </div>
 
-              <div className="form-group col-md-2">
+              <div className="form-group col-md-4">
                 <input type="number" name="zipCode"
                   ref={(input) => this.getZipCode = input}
                  defaultValue={employee.zip_code} onChange={this.onChange} 
@@ -183,7 +181,7 @@ class EditEmployee extends Component {
               </div>
             </div>
 
-            <p>Contact Details</p>
+            <p style={{margin: '10px'}}>Contact Details</p>
             <div className="form-row">
               <div className="form-group col-md-6">
                 <input type="number" name="mobileNumber"
@@ -207,7 +205,7 @@ class EditEmployee extends Component {
               className="form-control"  />
             </div>
 
-            <h5>Job Details</h5>
+            <h5 style={{margin: '10px'}}>Job Details</h5>
 
             <div className="form-row">
               <div className="form-group col-md-4">
@@ -254,7 +252,7 @@ class EditEmployee extends Component {
               </div>
             </div>
 
-            <h5>Benefits Details</h5>
+            <h5 style={{margin: '10px'}}>Benefits Details</h5>
             <div className="form-group">
               <input type="text" name="sss"
                 ref={(input) => this.getSss = input}
